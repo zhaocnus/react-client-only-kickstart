@@ -7,7 +7,6 @@ const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // path
-const DEST = path.resolve(__dirname, 'dist');
 const scssIncludePath =
   'includePaths[]=' +
   encodeURIComponent(path.resolve(__dirname, './node_modules')) +
@@ -23,12 +22,12 @@ module.exports = {
       'redux'
     ],
     index: [
-      './src/index.js'
+      './client/src/index.js'
     ]
   },
 
   output: {
-    path: DEST,
+    path: path.resolve(__dirname, './dist'),
     publicPath: '/',
     filename: '[name]-[hash].js'
   },
@@ -74,7 +73,7 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.tpl.html'),
+      template: path.resolve(__dirname, 'client/index.tpl.html'),
       inject: 'body',
       filename: 'index.html'
     }),
@@ -85,7 +84,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: './src/favicon.ico',
+        from: './client/favicon.ico',
         to: './'
       }
     ])

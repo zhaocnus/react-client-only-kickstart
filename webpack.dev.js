@@ -5,9 +5,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
-// path related
-const DEST = path.resolve(__dirname, 'build');
-
 // include grommet SCSS
 const scssIncludePath =
   'includePaths[]=' +
@@ -25,13 +22,13 @@ module.exports = {
       'webpack/hot/dev-server'
     ],
     index: [
-      './src/index.js',
+      './client/src/index.js',
       'webpack/hot/dev-server'
     ]
   },
 
   output: {
-    path: DEST,
+    path: './client/build',
     publicPath: '/',
     filename: '[name].bundle.js'
   },
@@ -76,7 +73,7 @@ module.exports = {
       minChunks: Infinity
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.tpl.html'),
+      template: path.resolve(__dirname, 'client/index.tpl.html'),
       inject: 'body',
       filename: 'index.html'
     })
