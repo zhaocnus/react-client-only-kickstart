@@ -1,11 +1,24 @@
-# React client-side only app kickstarter
+Smart cities experience
+=========================
 
-## Serve app in dev mode
+Features
+--------------
+  * react, redux, react-redux, react-router
+  * SCSS, bootstrap-sass
+  * webpack 1, html-webpack-plugin, webpack-dev-server
+
+TODOS
+-------------
+  * Add Jest
+
+Serve app in dev mode
+---------------------
   ```
   npm run build
   ```
 
-## Build app
+Build app
+---------------------
   ```
   npm run dist
   ```
