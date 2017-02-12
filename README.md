@@ -1,5 +1,5 @@
-Smart cities experience
-=========================
+React client-side only kickstart
+================================
 
 Features
 --------------
