@@ -6,19 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-// path
-const scssIncludePath =
-  'includePaths[]=' +
-  encodeURIComponent(path.resolve(__dirname, './node_modules')) +
-  '&includePaths[]=' +
-  encodeURIComponent(path.resolve(__dirname, './node_modules/grommet/node_modules'));
-
 module.exports = {
   entry: {
     vendor: [
       'react',
-      'react-dom',  
-      'react-router', 
+      'react-dom',
+      'react-router',
       'redux'
     ],
     index: [
@@ -48,7 +41,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'postcss', `sass?outputStyle=compressed&${scssIncludePath}`]
+        loaders: ['style', 'css', 'postcss', 'sass?outputStyle=compressed']
       },
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
@@ -86,6 +79,10 @@ module.exports = {
       {
         from: './client/favicon.ico',
         to: './'
+      },
+      {
+        from: './client/img',
+        to: './img'
       }
     ])
   ],
