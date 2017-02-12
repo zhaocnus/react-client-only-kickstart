@@ -19,6 +19,8 @@ module.exports = {
       'react-dom',  
       'react-router', 
       'redux',
+      'react-redux',
+      'redux-thunk',
       'webpack/hot/dev-server'
     ],
     index: [
