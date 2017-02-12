@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "My app",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --content-base build/ --inline --hot --progress --colors",
+    "start": "webpack-dev-server --config webpack.dev.js --content-base build/ --inline --hot --progress --colors --history-api-fallback",
     "dist": "webpack --config webpack.prod.js"
   },
   "author": "Young Zhao",

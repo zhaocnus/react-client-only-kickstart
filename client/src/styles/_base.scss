@@ -1,2 +1,6 @@
+body {
+  padding-top: $nav-height;
+}
+
 // remove blue outline in chrome
 *:focus { outline: 0 !important; }

@@ -1,8 +1,13 @@
 import React from 'react';
+import Container from '../../common/Container';
+import MainNav from '../../components/MainNav';
 
 const Home = () => (
-  <div className="Home">
-    Home
+  <div>
+    <MainNav />
+    <Container>
+      <h1>Home</h1>
+    </Container>
   </div>
 );
 
